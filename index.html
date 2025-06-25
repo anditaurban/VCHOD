@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Data Reject Visual Kontrol</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Form Input Data Reject</h1>
+            <p>Visual Control HOD - Quality Control System TIV KLT</p>
+        </div>
+
+        <div class="form-container">
+            <div id="successMessage" class="success-message">
+                ✅ Data berhasil disimpan ke database!
+            </div>
+
+            <div id="errorMessage" class="error-message">
+                ❌ Terjadi kesalahan. Silakan coba lagi.
+            </div>
+
+            <form id="rejectForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal <span class="required">*</span></label>
+                        <input type="date" id="tanggal" name="tanggal" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jam">Jam Input Data <span class="required">*</span></label>
+                        <select id="jam" name="jam" required>
+                            <option value="">-- Pilih Jam --</option>
+                            <option value="06:00">06:00</option>
+                            <option value="06:30">06:30</option>
+                            <option value="07:00">07:00</option>
+                            <option value="07:30">07:30</option>
+                            <option value="08:00">08:00</option>
+                            <option value="08:30">08:30</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="16:30">16:30</option>
+                            <option value="17:00">17:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="18:00">18:00</option>
+                            <option value="18:30">18:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="19:30">19:30</option>
+                            <option value="20:00">20:00</option>
+                            <option value="20:30">20:30</option>
+                            <option value="21:00">21:00</option>
+                            <option value="21:30">21:30</option>
+                            <option value="22:00">22:00</option>
+                            <option value="22:30">22:30</option>
+                            <option value="23:00">23:00</option>
+                            <option value="23:30">23:30</option>
+                            <option value="00:00">00:00</option>
+                            <option value="00:30">00:30</option>
+                            <option value="01:00">01:00</option>
+                            <option value="01:30">01:30</option>
+                            <option value="02:00">02:00</option>
+                            <option value="02:30">02:30</option>
+                            <option value="03:00">03:00</option>
+                            <option value="03:30">03:30</option>
+                            <option value="04:00">04:00</option>
+                            <option value="04:30">04:30</option>
+                            <option value="05:00">05:00</option>
+                            <option value="05:30">05:30</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="line">Line Produksi <span class="required">*</span></label>
+                        <select id="line" name="line" required>
+                            <option value="">-- Pilih Line --</option>
+                            <option value="Line R.Bardi">Line R.Bardi</option>
+                            <option value="Line Cap Snap">Line Cap Snap</option>
+                            <option value="Line Neptune">Line Neptune</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shift">Shift <span class="required">*</span></label>
+                        <select id="shift" name="shift" required>
+                            <option value="">-- Pilih Shift --</option>
+                            <option value="Shift 1 (06:00-14:00)">Shift 1 (06:00-14:00)</option>
+                            <option value="Shift 2 (15:00-22:00)">Shift 2 (15:00-22:00)</option>
+                            <option value="Shift 3 (23:00-06:00)">Shift 3 (23:00-06:00)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="jenisReject">Jenis Reject <span class="required">*</span></label>
+                    <select id="jenisReject" name="jenisReject" required>
+                        <option value="">-- Pilih Jenis Reject --</option>
+                        <optgroup label="Botol Kosong">
+                            <option value="Botol Bau">Botol Bau</option>
+                            <option value="Kotor Dalam">Kotor Dalam</option>
+                            <option value="Lumut Ringan">Lumut Ringan</option>
+                            <option value="Lumut Berat">Lumut Berat</option>
+                            <option value="Botol Afkir RB">Botol Afkir RB</option>
+                            <option value="Botol Afkir RD">Botol Afkir RD</option>
+                            <option value="Botol Afkir RM">Botol Afkir RM</option>
+                            <option value="Botol Buram">Botol Buram</option>
+                            <option value="Botol Retak > 4cm">Botol Retak > 4cm</option>
+                            <option value="Benda Asing < 3cm">Benda Asing < 3cm</option> <option value="Label Rusak">
+                                    Label Rusak</option>
+                            <option value="Kotor Badan">Kotor Badan</option>
+                            <option value="Botol Noda Cat/Spidol">Botol Noda Cat/Spidol</option>
+                        </optgroup>
+                        <optgroup label="Visual Isi">
+                            <option value="Volume Kurang">Volume Kurang</option>
+                            <option value="FB Kotor Air">FB Kotor Air</option>
+                            <option value="Tanpa Cap">Tanpa Cap</option>
+                            <option value="Tanpa Coding">Tanpa Coding</option>
+                            <option value="Afkir">Afkir</option>
+                            <option value="Pecah Packing">Pecah Packing</option>
+                            <option value="Pecah Conveyor">Pecah Conveyor</option>
+                            <option value="Botol Kotor">Botol Kotor</option>
+                            <option value="Pecah Loading">Pecah Loading</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="jumlah">Jumlah Reject <span class="required">*</span></label>
+                    <input type="number" id="jumlah" name="jumlah" min="1" placeholder="Masukkan jumlah reject"
+                        required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="spv">Nama SPV <span class="required">*</span></label>
+                        <input type="text" id="spv" name="spv" placeholder="Nama Supervisor" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="petugas">Nama Petugas/VC <span class="required">*</span></label>
+                        <input type="text" id="petugas" name="petugas" placeholder="Nama Visual Controller" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="keterangan">Keterangan Tambahan</label>
+                    <textarea id="keterangan" name="keterangan" placeholder="Keterangan tambahan (opsional)"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitButton">
+                    💾 Simpan Data Reject
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const timestamp = new Date().getTime();
+        const script = document.createElement('script');
+        script.src = `assets/js/script.js?v=${timestamp}`;
+        document.body.appendChild(script);
+    </script>
+
+</body>
+
+</html>
