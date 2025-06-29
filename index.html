@@ -109,43 +109,170 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="jenisReject">Jenis Reject <span class="required">*</span></label>
-                    <select id="jenisReject" name="jenisReject" required>
-                        <option value="">-- Pilih Jenis Reject --</option>
-                        <optgroup label="Botol Kosong">
-                            <option value="Botol Bau">Botol Bau</option>
-                            <option value="Kotor Dalam">Kotor Dalam</option>
-                            <option value="Lumut Ringan">Lumut Ringan</option>
-                            <option value="Lumut Berat">Lumut Berat</option>
-                            <option value="Botol Afkir RB">Botol Afkir RB</option>
-                            <option value="Botol Afkir RD">Botol Afkir RD</option>
-                            <option value="Botol Afkir RM">Botol Afkir RM</option>
-                            <option value="Botol Buram">Botol Buram</option>
-                            <option value="Botol Retak > 4cm">Botol Retak > 4cm</option>
-                            <option value="Benda Asing < 3cm">Benda Asing < 3cm</option> <option value="Label Rusak">
-                                    Label Rusak</option>
-                            <option value="Kotor Badan">Kotor Badan</option>
-                            <option value="Botol Noda Cat/Spidol">Botol Noda Cat/Spidol</option>
-                        </optgroup>
-                        <optgroup label="Visual Isi">
-                            <option value="Volume Kurang">Volume Kurang</option>
-                            <option value="FB Kotor Air">FB Kotor Air</option>
-                            <option value="Tanpa Cap">Tanpa Cap</option>
-                            <option value="Tanpa Coding">Tanpa Coding</option>
-                            <option value="Afkir">Afkir</option>
-                            <option value="Pecah Packing">Pecah Packing</option>
-                            <option value="Pecah Conveyor">Pecah Conveyor</option>
-                            <option value="Botol Kotor">Botol Kotor</option>
-                            <option value="Pecah Loading">Pecah Loading</option>
-                        </optgroup>
-                    </select>
+               <!-- Reject Visual Kosong Section -->
+                <div class="reject-section">
+                    <div class="section-header" onclick="toggleRejectSection('kosong')">
+                        <h3 class="section-title">📦 Reject Visual Kosong</h3>
+                        <span class="toggle-icon" id="iconKosong">▼</span>
+                    </div>
+                    <div class="checkbox-container" id="containerKosong">
+                        <div class="checkbox-grid">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="botolBau" name="rejectKosong" value="Botol Bau">
+                                <label for="botolBau">Botol Bau</label>
+                                <input type="number" id="jumlahBotolBau" name="jumlahBotolBau" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="kotorDalam" name="rejectKosong" value="Kotor Dalam">
+                                <label for="kotorDalam">Kotor Dalam</label>
+                                <input type="number" id="jumlahKotorDalam" name="jumlahKotorDalam" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lumutRingan" name="rejectKosong" value="Lumut Ringan">
+                                <label for="lumutRingan">Lumut Ringan</label>
+                                <input type="number" id="jumlahLumutRingan" name="jumlahLumutRingan" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lumutBerat" name="rejectKosong" value="Lumut Berat">
+                                <label for="lumutBerat">Lumut Berat</label>
+                                <input type="number" id="jumlahLumutBerat" name="jumlahLumutBerat" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="botolAfkirRB" name="rejectKosong" value="Botol Afkir RB">
+                                <label for="botolAfkirRB">Botol Afkir RB</label>
+                                <input type="number" id="jumlahBotolAfkirRB" name="jumlahBotolAfkirRB" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="botolAfkirRD" name="rejectKosong" value="Botol Afkir RD">
+                                <label for="botolAfkirRD">Botol Afkir RD</label>
+                                <input type="number" id="jumlahBotolAfkirRD" name="jumlahBotolAfkirRD" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="botolAfkirRM" name="rejectKosong" value="Botol Afkir RM">
+                                <label for="botolAfkirRM">Botol Afkir RM</label>
+                                <input type="number" id="jumlahBotolAfkirRM" name="jumlahBotolAfkirRM" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="botolBuram" name="rejectKosong" value="Botol Buram">
+                                <label for="botolBuram">Botol Buram</label>
+                                <input type="number" id="jumlahBotolBuram" name="jumlahBotolBuram" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="botolRetak" name="rejectKosong" value="Botol Retak > 4cm">
+                                <label for="botolRetak">Botol Retak > 4cm</label>
+                                <input type="number" id="jumlahBotolRetak" name="jumlahBotolRetak" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="bendaAsing" name="rejectKosong" value="Benda Asing < 3cm">
+                                <label for="bendaAsing">Benda Asing < 3cm</label>
+                                <input type="number" id="jumlahBendaAsing" name="jumlahBendaAsing" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="labelRusak" name="rejectKosong" value="Label Rusak">
+                                <label for="labelRusak">Label Rusak</label>
+                                <input type="number" id="jumlahLabelRusak" name="jumlahLabelRusak" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="kotorBadan" name="rejectKosong" value="Kotor Badan">
+                                <label for="kotorBadan">Kotor Badan</label>
+                                <input type="number" id="jumlahKotorBadan" name="jumlahKotorBadan" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="botolNoda" name="rejectKosong" value="Botol Noda Cat/Spidol">
+                                <label for="botolNoda">Botol Noda Cat/Spidol</label>
+                                <input type="number" id="jumlahBotolNoda" name="jumlahBotolNoda" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="rejectLeakTester" name="rejectKosong" value="Reject Leak Tester">
+                                <label for="rejectLeakTester">Reject Leak Tester</label>
+                                <input type="number" id="jumlahRejectLeakTester" name="jumlahRejectLeakTester" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="jumlah">Jumlah Reject <span class="required">*</span></label>
-                    <input type="number" id="jumlah" name="jumlah" min="1" placeholder="Masukkan jumlah reject"
-                        required>
+                <!-- Reject Visual Isi Section -->
+                <div class="reject-section">
+                    <div class="section-header" onclick="toggleRejectSection('isi')">
+                        <h3 class="section-title">🍾 Reject Visual Isi</h3>
+                        <span class="toggle-icon" id="iconIsi">▼</span>
+                    </div>
+                    <div class="checkbox-container" id="containerIsi">
+                        <div class="checkbox-grid">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="volumeKurang" name="rejectIsi" value="Volume Kurang">
+                                <label for="volumeKurang">Volume Kurang</label>
+                                <input type="number" id="jumlahVolumeKurang" name="jumlahVolumeKurang" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="fbKotorAir" name="rejectIsi" value="FB Kotor Air">
+                                <label for="fbKotorAir">FB Kotor Air</label>
+                                <input type="number" id="jumlahFbKotorAir" name="jumlahFbKotorAir" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="tanpaCap" name="rejectIsi" value="Tanpa Cap">
+                                <label for="tanpaCap">Tanpa Cap</label>
+                                <input type="number" id="jumlahTanpaCap" name="jumlahTanpaCap" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="tanpaCoding" name="rejectIsi" value="Tanpa Coding">
+                                <label for="tanpaCoding">Tanpa Coding</label>
+                                <input type="number" id="jumlahTanpaCoding" name="jumlahTanpaCoding" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="afkir" name="rejectIsi" value="Afkir">
+                                <label for="afkir">Afkir</label>
+                                <input type="number" id="jumlahAfkir" name="jumlahAfkir" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="pecahPacking" name="rejectIsi" value="Pecah Packing">
+                                <label for="pecahPacking">Pecah Packing</label>
+                                <input type="number" id="jumlahPecahPacking" name="jumlahPecahPacking" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="pecahConveyor" name="rejectIsi" value="Pecah Conveyor">
+                                <label for="pecahConveyor">Pecah Conveyor</label>
+                                <input type="number" id="jumlahPecahConveyor" name="jumlahPecahConveyor" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="botolKotor" name="rejectIsi" value="Botol Kotor">
+                                <label for="botolKotor">Botol Kotor</label>
+                                <input type="number" id="jumlahBotolKotor" name="jumlahBotolKotor" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="pecahLoading" name="rejectIsi" value="Pecah Loading">
+                                <label for="pecahLoading">Pecah Loading</label>
+                                <input type="number" id="jumlahPecahLoading" name="jumlahPecahLoading" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="capRusak" name="rejectIsi" value="Cap Rusak">
+                                <label for="capRusak">Cap Rusak</label>
+                                <input type="number" id="jumlahCapRusak" name="jumlahCapRusak" min="0" placeholder="PC" class="jumlah-input" disabled>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="form-row">
